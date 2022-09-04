@@ -1,0 +1,48 @@
+{
+  "name": "@mengjx/jinrishici",
+  "version": "1.0.0",
+  "description": "获取今日诗词数据",
+  "keywords": [
+    "jinrishici",
+    "typescript"
+  ],
+  "author": "GraciaMeng <1040616435@qq.com>",
+  "license": "MIT",
+  "packageManager": "pnpm@7.8.0",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    },
+    "./*": "./*"
+  },
+  "files": [
+    "dist",
+    "*.d.ts"
+  ],
+  "scripts": {
+    "build": "tsup src/*.ts --format esm,cjs --dts --splitting --clean",
+    "dev": "tsup src/*.ts --watch src",
+    "publishPkg": "npm publish",
+    "test_dev": "node ./examples/index.js"
+  },
+  "homepage": "https://github.com/GraciaMeng/jinrishici#readme",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": "https://github.com/GraciaMeng/jinrishici",
+  "bugs": {
+    "url": "https://github.com/GraciaMeng/jinrishici/issues"
+  },
+  "devDependencies": {
+    "tsup": "^6.2.3",
+    "typescript": "^4.8.2"
+  }
+}
