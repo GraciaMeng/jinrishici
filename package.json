@@ -1,6 +1,6 @@
 {
   "name": "@mengjx/jinrishici",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "获取今日诗词，更优雅的esm和ts类型支持",
   "keywords": [
     "jinrishici",
@@ -25,7 +25,8 @@
     "./*": "./*"
   },
   "files": [
-    "build"
+    "dist",
+    "LICENSE"
   ],
   "scripts": {
     "build": "rollup -c",
@@ -44,6 +45,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.5.0",
+    "rimraf": "^5.0.1",
     "rollup": "^2.79.0",
     "tslib": "^2.4.0",
     "tsup": "^6.2.3",
